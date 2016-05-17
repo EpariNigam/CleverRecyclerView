@@ -48,7 +48,7 @@ class CleverRecyclerViewHelper {
 
     private void initSlidingThreshold() {
         int itemWidth = (mRecyclerView.getWidth() - mRecyclerView.getPaddingLeft() - mRecyclerView.getPaddingRight()) / mVisibleChildCount;
-        int itemHeight = (mRecyclerView.getWidth() - mRecyclerView.getPaddingLeft() - mRecyclerView.getPaddingRight()) / mVisibleChildCount;
+        int itemHeight = (mRecyclerView.getHeight() - mRecyclerView.getPaddingTop() - mRecyclerView.getPaddingBottom()) / mVisibleChildCount;
         mHorizontalSlidingThreshold = mVisibleChildCount == 1 ? itemWidth * mSlidingThreshold : itemWidth * 0.5f;
         mVerticalSlidingThreshold = mVisibleChildCount == 1 ? itemHeight * mSlidingThreshold : itemHeight * 0.5f;
     }
